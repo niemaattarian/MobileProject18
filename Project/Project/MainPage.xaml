@@ -1,14 +1,137 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:Project"
              x:Class="Project.MainPage">
 
-    <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+  <ContentPage.Resources>
+    <Style x:Key="EntryStyle" TargetType="Entry" >
+      <Setter Property="FontSize" Value="Small" />
+      <Setter Property="TextColor" Value="Blue" />
+    </Style>
+    <Style x:Key="ButtonStyle" TargetType="Button" >
+      <Setter Property="CornerRadius" Value="7" />
+      <Setter Property="BackgroundColor" Value="Green" />
+    </Style>
+    <DataTemplate x:Key="ArtistTemplate">
+      <ViewCell>
+        <ViewCell.ContextActions>
+          <!-- <MenuItem Text="Delete" 
+                             Clicked="DeleteContext_Clicked"
+                              CommandParameter="{Binding .}"
+                              IsDestructive="True" />-->
+        </ViewCell.ContextActions>
+        <StackLayout Margin="2">
+          <StackLayout Orientation="Horizontal" Margin="2, 1">
+            <Label Text="Artists: " />
+            <Label Text="{Binding Path=Artists}" />
+          </StackLayout>
+          <StackLayout Orientation="Horizontal" Margin="2, 1">
+            <Label Text="Age: " />
+            <Label Text="{Binding Path=Age}" />
+          </StackLayout>
+          <StackLayout Orientation="Horizontal" Margin="2, 1">
+            <Label Text="Genre: " />
+            <Label Text="{Binding Path=Genre}" />
+          </StackLayout>
+          <StackLayout Orientation="Horizontal" Margin="2, 1">
+            <Label Text="Album: " />
+            <Label Text="{Binding Path=Album}" />
+          </StackLayout>
+          <StackLayout Orientation="Horizontal" Margin="2, 1">
+            <Label Text="Sales: " />
+            <Label Text="{Binding Path=Sales}" />
+          </StackLayout>
+        </StackLayout>
+      </ViewCell>
+    </DataTemplate>
+  </ContentPage.Resources>
+<!--
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto" />
+      <RowDefinition />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+    </Grid.RowDefinitions>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="*" />
+      <ColumnDefinition Width="3*" />
+    </Grid.ColumnDefinitions>
+
+    <Label Text="Best Dog Classifier in the World!"
+               HorizontalOptions="Center" Margin="0, 5"
+               Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"/>
+
+    <ListView Margin="3, 3, 3, 0"
+                  ItemsSource="{Binding , Mode=TwoWay}"
+                  SelectedItem="{Binding SelectedDog, Mode=TwoWay}"
+                  ItemSelected="ListViewOneDogSelected"
+                  Grid.Row="1" Grid.Column="0"
+                  ItemTemplate="{StaticResource ArtistTemplate}" />
+
+    <StackLayout Grid.Row="1" 
+                     Grid.Column="1" Margin="10"
+                     BindingContext="{Binding SelectedDog}">
+      <StackLayout x:Name="slNonEdits">
+        <StackLayout Orientation="Horizontal">
+          <Label Text="Breed: " />
+          <Label x:Name="lblOneDogBreed" Text="{Binding Path=Breed}" />
+        </StackLayout>
+      </StackLayout>
+      <StackLayout x:Name="slEditable">
+        <StackLayout Orientation="Horizontal" >
+          <Label Text="Origin: " />
+          <Entry x:Name="entOrigin" 
+                           Text="{Binding Path=Origin}"
+                           HorizontalOptions="FillAndExpand" 
+                           Style="{StaticResource EntryStyle}"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal" >
+          <Label Text="Size: " />
+          <Entry x:Name="entSize" 
+                           Text="{Binding Path=Size}"
+                           HorizontalOptions="FillAndExpand" 
+                           Style="{StaticResource EntryStyle}"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal" >
+          <Label Text="Grooming: " />
+          <Entry x:Name="entGrooming" 
+                           Text="{Binding Path=Grooming}"
+                           HorizontalOptions="FillAndExpand" 
+                           Style="{StaticResource EntryStyle}"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal" >
+          <Label Text="Exercise: " />
+          <Entry x:Name="entExercise" 
+                           Text="{Binding Path=Exercise}"
+                           HorizontalOptions="FillAndExpand" 
+                           Style="{StaticResource EntryStyle}"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal" >
+          <Label Text="Temperament: " />
+          <Entry x:Name="entTemperament" 
+                           Text="{Binding Path=Temperament}"
+                           HorizontalOptions="FillAndExpand" 
+                           Style="{StaticResource EntryStyle}"/>
+        </StackLayout>
+      </StackLayout>
     </StackLayout>
 
+    <StackLayout x:Name="slButtons" Orientation="Horizontal" 
+                     Margin="0, 2" Grid.Row="2" 
+                     Grid.Column="1">
+      <Button x:Name="btnSaveFile" Text="Save" 
+                    Style="{StaticResource ButtonStyle}"
+                    Command="{Binding SaveListCommand}"
+                    Margin="2" />
+      <Button x:Name="btnDeleteOne" Text="Delete"
+                    Style="{StaticResource ButtonStyle}"
+                    Command="{Binding DeleteFromListCommand}"
+                    CommandParameter="{Binding SelectedDog}"/>
+      <Label x:Name="lblCount" Text="" />
+    </StackLayout>
+
+  </Grid>
+-->
 </ContentPage>

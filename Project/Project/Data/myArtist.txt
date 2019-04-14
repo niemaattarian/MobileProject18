@@ -1,6 +1,6 @@
 [
-{"Artists":"Kanye West", "Age":"32", "Genre":"Hip Hop",
+{"Artists":"Kanye West", "Genre":"Hip Hop",
  "Album":"Ye", "Sales":"100,000,000" }
-{"Artist":"The Weeknd", "Age":"27", "Genre":"R and B",
+{"Artist":"The Weeknd", "Genre":"R and B",
  "Album":"MDM", "Sales":"70,000,000" }
 ]

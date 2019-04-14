@@ -8,7 +8,6 @@ namespace ProjectModel
     {
       #region == Public Properties ==
       public string Artists { get; set; }
-      public int Age { get; set; }
       public string Genre { get; set; }
       public string Album { get; set; }
       public int Sales { get; set; }
@@ -19,10 +18,9 @@ namespace ProjectModel
       {
 
       }
-      public Artist(string ar, int ag, string g, string al, int s)
+      public Artist(string ar, string g, string al, int s)
       {
         Artists = ar;
-        Age = ag;
         Genre = g;
         Album = al;
         Sales = s;
