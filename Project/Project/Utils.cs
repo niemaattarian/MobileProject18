@@ -12,7 +12,7 @@ namespace Utils
     class MyUtils
     {
       public const string JSON_ARTIST_FILE = "myArtist.txt";
-      public const string MAINPAGE_IMAGE = "panda1.png";
+      public const string MAINPAGE_IMAGE = "travis.jpg";
       public const string UWP_IMG_FOLDER = "Images/";
       //UWP_IMG_FOLDER + MAINPAGE_IMAGE
     }

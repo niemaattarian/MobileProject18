@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\Niema\Desktop\Project\Project\Project.UWP\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-04-14T21:43:51.162</Modified>
+      <Modified>2019-04-15T23:03:26.792</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Niema\Desktop\Project\Project\Project.UWP\bin\x86\Debug\Project.UWP.exe">
       <PackagePath>entrypoint\Project.UWP.exe</PackagePath>
-      <Modified>2019-04-14T21:43:48.658</Modified>
+      <Modified>2019-04-15T23:03:23.733</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Niema\.nuget\packages\newtonsoft.json\12.0.1\lib\netstandard2.0\Newtonsoft.Json.dll">
       <PackagePath>Newtonsoft.Json.dll</PackagePath>
@@ -716,7 +716,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Niema\Desktop\Project\Project\Project\bin\Debug\netstandard2.0\Project.dll">
       <PackagePath>Project.dll</PackagePath>
-      <Modified>2019-04-14T21:43:35.877</Modified>
+      <Modified>2019-04-15T23:03:08.865</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\bin\10.0.17763.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
@@ -857,6 +857,10 @@
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2019-04-10T21:15:11.600</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Niema\Desktop\Project\Project\Project.UWP\Images\travis.jpg">
+      <PackagePath>Images\travis.jpg</PackagePath>
+      <Modified>2019-04-14T21:57:57.305</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Niema\Desktop\Project\Project\Project.UWP\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
       <Modified>2019-04-10T21:15:11.614</Modified>
@@ -867,11 +871,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Niema\Desktop\Project\Project\Project.UWP\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2019-04-14T21:43:48.265</Modified>
+      <Modified>2019-04-15T23:03:23.093</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Niema\Desktop\Project\Project\Project.UWP\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2019-04-14T21:43:48.266</Modified>
+      <Modified>2019-04-15T23:03:23.094</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.17763.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -883,11 +887,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Niema\Desktop\Project\Project\Project.UWP\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2019-04-14T21:36:26.774</Modified>
+      <Modified>2019-04-14T22:07:55.002</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Niema\Desktop\Project\Project\Project.UWP\bin\x86\Debug\Core\Project.UWP.exe">
       <PackagePath>Project.UWP.exe</PackagePath>
-      <Modified>2019-04-14T21:43:51.149</Modified>
+      <Modified>2019-04-15T23:03:26.778</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

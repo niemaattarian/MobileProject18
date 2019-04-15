@@ -26,7 +26,7 @@ namespace ProjectModel.ViewModels
     }
     public ArtistViewModel SelectedArtist
     {
-      get { return SelectedArtist; }
+      get { return selectedArtist; }
       set
       {
         SetValue(ref selectedArtist, value);

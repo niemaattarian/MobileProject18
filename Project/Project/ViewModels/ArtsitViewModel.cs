@@ -56,7 +56,7 @@ namespace ProjectModel
                                         typeof(MainPage)).Assembly;
         // create the stream
         Stream stream = assembly.GetManifestResourceStream(
-                            "ProjectModel.Data.myArtist.txt");
+                            "Project.Data.myArtist.txt");
         using (var reader = new StreamReader(stream))
         {
           jsonText = reader.ReadToEnd();

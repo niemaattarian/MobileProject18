@@ -1,6 +1,13 @@
 [
-{"Artists":"Kanye West", "Genre":"Hip Hop",
- "Album":"Ye", "Sales":"100,000,000" }
-{"Artist":"The Weeknd", "Genre":"R and B",
- "Album":"MDM", "Sales":"70,000,000" }
+{"Artists":"Kanye West", "Genre":"Hip Hop", "Album":"Ye", "Sales":700 },
+{"Artists":"Kanye West", "Genre":"Hip Hop", "Album":"Ye", "Sales":700 },
+{"Artists":"Kanye West", "Genre":"Hip Hop", "Album":"Ye", "Sales":700 },
+{"Artists":"Kanye West", "Genre":"Hip Hop", "Album":"Ye", "Sales":700 },
+{"Artists":"Kanye West", "Genre":"Hip Hop", "Album":"Ye", "Sales":700 },
+{"Artists":"Kanye West", "Genre":"Hip Hop", "Album":"Ye", "Sales":700 },
+{"Artists":"Kanye West", "Genre":"Hip Hop", "Album":"Ye", "Sales":700 },
+{"Artists":"Kanye West", "Genre":"Hip Hop", "Album":"Ye", "Sales":700 },
+{"Artists":"Kanye West", "Genre":"Hip Hop", "Album":"Ye", "Sales":700 },
+{"Artists":"Kanye West", "Genre":"Hip Hop", "Album":"Ye", "Sales":700 },
+{"Artists":"Kanye West", "Genre":"Hip Hop", "Album":"Ye", "Sales":700 }
 ]

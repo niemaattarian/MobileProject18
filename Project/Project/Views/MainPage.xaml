@@ -2,51 +2,41 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:Project"
-             x:Class="Project.MainPage">
+             x:Class="Project.MainPage"
+             BackgroundImage="Images/travis.jpg">
 
   <ContentPage.Resources>
     <Style x:Key="EntryStyle" TargetType="Entry" >
       <Setter Property="FontSize" Value="Small" />
-      <Setter Property="TextColor" Value="Blue" />
+      <Setter Property="TextColor" Value="Purple" />
     </Style>
     <Style x:Key="ButtonStyle" TargetType="Button" >
       <Setter Property="CornerRadius" Value="7" />
-      <Setter Property="BackgroundColor" Value="Green" />
+      <Setter Property="BackgroundColor" Value="Plum"/>
     </Style>
+    
     <DataTemplate x:Key="ArtistTemplate">
       <ViewCell>
         <ViewCell.ContextActions>
-          <!-- <MenuItem Text="Delete" 
-                             Clicked="DeleteContext_Clicked"
-                              CommandParameter="{Binding .}"
-                              IsDestructive="True" />-->
+          <MenuItem Text="Delete" 
+           Clicked="DeleteContext_Clicked"
+           CommandParameter="{Binding .}"
+           IsDestructive="True" />
         </ViewCell.ContextActions>
         <StackLayout Margin="2">
           <StackLayout Orientation="Horizontal" Margin="2, 1">
-            <Label Text="Artists: " />
-            <Label Text="{Binding Path=Artists}" />
+            <Label Text="Artists: " FontSize="Small" TextColor="Plum"/>
+            <Label Text="{Binding Path=Album}" FontSize="Small" TextColor="GhostWhite"/>
           </StackLayout>
           <StackLayout Orientation="Horizontal" Margin="2, 1">
-            <Label Text="Age: " />
-            <Label Text="{Binding Path=Age}" />
-          </StackLayout>
-          <StackLayout Orientation="Horizontal" Margin="2, 1">
-            <Label Text="Genre: " />
-            <Label Text="{Binding Path=Genre}" />
-          </StackLayout>
-          <StackLayout Orientation="Horizontal" Margin="2, 1">
-            <Label Text="Album: " />
-            <Label Text="{Binding Path=Album}" />
-          </StackLayout>
-          <StackLayout Orientation="Horizontal" Margin="2, 1">
-            <Label Text="Sales: " />
-            <Label Text="{Binding Path=Sales}" />
+            <Label Text="Genre: " FontSize="Small" TextColor="Plum"/>
+            <Label Text="{Binding Path=Genre}" FontSize="Small" TextColor="GhostWhite"/>
           </StackLayout>
         </StackLayout>
       </ViewCell>
     </DataTemplate>
   </ContentPage.Resources>
-<!--
+
   <Grid>
     <Grid.RowDefinitions>
       <RowDefinition Height="Auto" />
@@ -59,59 +49,45 @@
       <ColumnDefinition Width="3*" />
     </Grid.ColumnDefinitions>
 
-    <Label Text="Best Dog Classifier in the World!"
+    <Label Text="Artist List!"
                HorizontalOptions="Center" Margin="0, 5"
-               Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"/>
+               Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" FontSize="Large" TextColor="Plum"/>
 
     <ListView Margin="3, 3, 3, 0"
-                  ItemsSource="{Binding , Mode=TwoWay}"
-                  SelectedItem="{Binding SelectedDog, Mode=TwoWay}"
-                  ItemSelected="ListViewOneDogSelected"
+                  ItemsSource="{Binding ArtistList, Mode=TwoWay}"
+                  SelectedItem="{Binding SelectedArtist, Mode=TwoWay}"
+                  ItemSelected="ViewOneArtistSelected"
                   Grid.Row="1" Grid.Column="0"
                   ItemTemplate="{StaticResource ArtistTemplate}" />
 
     <StackLayout Grid.Row="1" 
                      Grid.Column="1" Margin="10"
-                     BindingContext="{Binding SelectedDog}">
+                     BindingContext="{Binding SelectedArtist}">
       <StackLayout x:Name="slNonEdits">
         <StackLayout Orientation="Horizontal">
-          <Label Text="Breed: " />
-          <Label x:Name="lblOneDogBreed" Text="{Binding Path=Breed}" />
+          <Label Text="Artist: " FontSize="Medium" TextColor="Plum"/>
+          <Label x:Name="lblOneArtist" Text="{Binding Path=Artists}" />
         </StackLayout>
       </StackLayout>
       <StackLayout x:Name="slEditable">
         <StackLayout Orientation="Horizontal" >
-          <Label Text="Origin: " />
-          <Entry x:Name="entOrigin" 
-                           Text="{Binding Path=Origin}"
+          <Label Text="Genre: " FontSize="Medium" TextColor="Plum"/>
+          <Entry x:Name="entGenre" 
+                           Text="{Binding Path=Genre}"
                            HorizontalOptions="FillAndExpand" 
                            Style="{StaticResource EntryStyle}"/>
         </StackLayout>
         <StackLayout Orientation="Horizontal" >
-          <Label Text="Size: " />
-          <Entry x:Name="entSize" 
-                           Text="{Binding Path=Size}"
+          <Label Text="Album: " FontSize="Medium" TextColor="Plum"/>
+          <Entry x:Name="entAlbum" 
+                           Text="{Binding Path=Album}"
                            HorizontalOptions="FillAndExpand" 
                            Style="{StaticResource EntryStyle}"/>
         </StackLayout>
         <StackLayout Orientation="Horizontal" >
-          <Label Text="Grooming: " />
-          <Entry x:Name="entGrooming" 
-                           Text="{Binding Path=Grooming}"
-                           HorizontalOptions="FillAndExpand" 
-                           Style="{StaticResource EntryStyle}"/>
-        </StackLayout>
-        <StackLayout Orientation="Horizontal" >
-          <Label Text="Exercise: " />
-          <Entry x:Name="entExercise" 
-                           Text="{Binding Path=Exercise}"
-                           HorizontalOptions="FillAndExpand" 
-                           Style="{StaticResource EntryStyle}"/>
-        </StackLayout>
-        <StackLayout Orientation="Horizontal" >
-          <Label Text="Temperament: " />
-          <Entry x:Name="entTemperament" 
-                           Text="{Binding Path=Temperament}"
+          <Label Text="Sales: " FontSize="Medium" TextColor="Plum"/>
+          <Entry x:Name="entSales" 
+                           Text="{Binding Path=Sales}"
                            HorizontalOptions="FillAndExpand" 
                            Style="{StaticResource EntryStyle}"/>
         </StackLayout>
@@ -128,10 +104,10 @@
       <Button x:Name="btnDeleteOne" Text="Delete"
                     Style="{StaticResource ButtonStyle}"
                     Command="{Binding DeleteFromListCommand}"
-                    CommandParameter="{Binding SelectedDog}"/>
+                    CommandParameter="{Binding SelectedArtist}"/>
       <Label x:Name="lblCount" Text="" />
     </StackLayout>
 
   </Grid>
--->
+<!---->
 </ContentPage>
