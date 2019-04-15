@@ -302,3 +302,4 @@ C:\Users\Niema\Desktop\Project\Project\Project.UWP\obj\x86\Debug\MultipleQualifi
 C:\Users\Niema\Desktop\Project\Project\Project.UWP\obj\x86\Debug\Xamarin.Forms.Platform.UAP.pri.xml
 C:\Users\Niema\Desktop\Project\Project\Project.UWP\obj\x86\Debug\ProjectArchitectures.txt
 C:\Users\Niema\Desktop\Project\Project\Project.UWP\obj\x86\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_636758552200000000.json
+C:\Users\Niema\Desktop\Project\Project\Project.UWP\bin\x86\Debug\Data\myArtist.txt

@@ -1,7 +1,6 @@
 C:\Users\Niema\Desktop\Project\Project\Project\bin\Debug\netstandard2.0\Project.deps.json
 C:\Users\Niema\Desktop\Project\Project\Project\bin\Debug\netstandard2.0\Project.dll
 C:\Users\Niema\Desktop\Project\Project\Project\bin\Debug\netstandard2.0\Project.pdb
-C:\Users\Niema\Desktop\Project\Project\Project\obj\Debug\netstandard2.0\Project.csprojAssemblyReference.cache
 C:\Users\Niema\Desktop\Project\Project\Project\obj\Debug\netstandard2.0\App.xaml.g.cs
 C:\Users\Niema\Desktop\Project\Project\Project\obj\Debug\netstandard2.0\Project.csproj.CoreCompileInputs.cache
 C:\Users\Niema\Desktop\Project\Project\Project\obj\Debug\netstandard2.0\Project.AssemblyInfoInputs.cache
@@ -11,3 +10,5 @@ C:\Users\Niema\Desktop\Project\Project\Project\obj\Debug\netstandard2.0\Project.
 C:\Users\Niema\Desktop\Project\Project\Project\obj\Debug\netstandard2.0\XamlC.stamp
 C:\Users\Niema\Desktop\Project\Project\Project\obj\Debug\netstandard2.0\Views\ArtistDetailPage.xaml.g.cs
 C:\Users\Niema\Desktop\Project\Project\Project\obj\Debug\netstandard2.0\Views\MainPage.xaml.g.cs
+C:\Users\Niema\Desktop\Project\Project\Project\bin\Debug\netstandard2.0\Data\myArtist.txt
+C:\Users\Niema\Desktop\Project\Project\Project\obj\Debug\netstandard2.0\Project.csprojAssemblyReference.cache
