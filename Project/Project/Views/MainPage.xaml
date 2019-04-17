@@ -3,13 +3,15 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:Project"
              x:Class="Project.MainPage"
-             BackgroundImage="Images/travis.jpg">
+             BackgroundImage="Images/travis.jpg"><!--Brings in background image-->
 
   <ContentPage.Resources>
+    <!--Style creates a style for the text of the entry box; e.g. font size and text colour-->
     <Style x:Key="EntryStyle" TargetType="Entry" >
       <Setter Property="FontSize" Value="Small" />
       <Setter Property="TextColor" Value="Plum" />
     </Style>
+    <!--Creates style for the buttons; e.g. corner radius and background color-->
     <Style x:Key="ButtonStyle" TargetType="Button" >
       <Setter Property="CornerRadius" Value="7" />
       <Setter Property="BackgroundColor" Value="Plum" />
@@ -24,19 +26,21 @@
                               IsDestructive="True" />
         </ViewCell.ContextActions>
         <StackLayout Margin="2">
-          <StackLayout Orientation="Horizontal" Margin="2, 1">
-            <Label Text="zyx: " TextColor="White" />
-            <Label Text="{Binding Path=Album}" TextColor="White"/>
+          <StackLayout Orientation="Horizontal" Margin="2, 1"><!--Horizontal margin-->
+            <Label Text="Album: " TextColor="Plum" />
+            <Label Text="{Binding Path=Album}" TextColor="White"/><!--Calls the path in which the data is stored in the myArtist file-->
           </StackLayout>
           <StackLayout Orientation="Horizontal" Margin="2, 1">
-            <Label Text="Sizehahaha: " TextColor="White"/>
-            <Label Text="{Binding Path=Genre}" TextColor="white"/>
+            <Label Text="Genre: " TextColor="Plum"/>
+            <Label Text="{Binding Path=Genre}" TextColor="White"/>
+            <!--Calls the path in which the data is stored in the myArtist file-->
           </StackLayout>
         </StackLayout>
       </ViewCell>
     </DataTemplate>
-  </ContentPage.Resources>
-  
+  </ContentPage.Resources><!--Allows for the page design resourcees-->
+
+  <!--Automatically sets the grid height and width for the mainpageS-->
   <Grid>
     <Grid.RowDefinitions>
       <RowDefinition Height="Auto" />
@@ -49,17 +53,17 @@
       <ColumnDefinition Width="3*" />
     </Grid.ColumnDefinitions>
 
-    <Label Text="Artist List!"
+    <Label Text="Artist Page!"
                HorizontalOptions="Center" Margin="0, 5"
-               Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" FontSize="Large" TextColor="Plum"/>
-
+               Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" FontSize="Large" TextColor="Plum"/> <!--Page header-->
+    <!--Binds the data to the editable list-->
     <ListView Margin="3, 3, 3, 0"
                   ItemsSource="{Binding ArtistList, Mode=TwoWay}"
                   SelectedItem="{Binding SelectedArtist, Mode=TwoWay}"
                   ItemSelected="ViewOneArtistSelected"
                   Grid.Row="1" Grid.Column="0"
                   ItemTemplate="{StaticResource ArtistTemplate}" />
-
+     <!--Allows for edits on everyhting apart from the artist.-->
     <StackLayout Grid.Row="1" 
                      Grid.Column="1" Margin="10"
                      BindingContext="{Binding SelectedArtist}">
@@ -75,40 +79,40 @@
           <Entry x:Name="entGenre" 
                            Text="{Binding Path=Genre}"
                            HorizontalOptions="FillAndExpand" 
-                           Style="{StaticResource EntryStyle}"/>
+                           Style="{StaticResource EntryStyle}"/><!--Call entry style resource for design-->
         </StackLayout>
         <StackLayout Orientation="Horizontal" >
           <Label Text="Album: " FontSize="Medium" TextColor="Plum"/>
           <Entry x:Name="entAlbum" 
                            Text="{Binding Path=Album}"
                            HorizontalOptions="FillAndExpand" 
-                           Style="{StaticResource EntryStyle}"/>
+                           Style="{StaticResource EntryStyle}"/><!--Call entry style resource for design-->
         </StackLayout>
         <StackLayout Orientation="Horizontal" >
           <Label Text="Sales: " FontSize="Medium" TextColor="Plum"/>
           <Entry x:Name="entSales" 
                            Text="{Binding Path=Sales}"
                            HorizontalOptions="FillAndExpand" 
-                           Style="{StaticResource EntryStyle}"/>
+                           Style="{StaticResource EntryStyle}"/><!--Call entry style resource for design-->
         </StackLayout>
       </StackLayout>
     </StackLayout>
 
+    <!--Buttons-->
     <StackLayout x:Name="slButtons" Orientation="Horizontal" 
                      Margin="0, 2" Grid.Row="2" 
                      Grid.Column="1">
       <Button x:Name="btnSaveFile" Text="Save" 
                     Style="{StaticResource ButtonStyle}"
                     Command="{Binding SaveListCommand}"
-                    Margin="2" />
+                    Margin="2" /><!--Save button after editing information-->
       <Button x:Name="btnDeleteOne" Text="Delete"
                     Style="{StaticResource ButtonStyle}"
                     Command="{Binding DeleteFromListCommand}"
-                    CommandParameter="{Binding SelectedArtist}"/>
+                    CommandParameter="{Binding SelectedArtist}"/><!--Delete button to delete artist entry-->
       <Button x:Name="btnAddFile" Text="Add" Clicked="BtnAddFile_Clicked"
               Style="{StaticResource ButtonStyle}"
-                    Margin="2" />
-   <!--   <Label x:Name="lblCount" Text="" />-->
+                    Margin="2" /><!--Add button to navigate to entry page-->
     </StackLayout>
 
   </Grid>

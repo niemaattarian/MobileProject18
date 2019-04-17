@@ -21,9 +21,9 @@ namespace Project
       (BindingContext as MainPageViewModel).DeleteFromListCommand.Execute(artist);
     }
 
-    private async void ViewOneArtistSelected(object sender, SelectedItemChangedEventArgs e)
+    private void ViewOneArtistSelected(object sender, SelectedItemChangedEventArgs e)
     {
-      await (BindingContext as MainPageViewModel).SelectOneArtist(e.SelectedItem as ArtistViewModel);
+      (BindingContext as MainPageViewModel).SelectOneArtist(e.SelectedItem as ArtistViewModel);
       // could do this even smarter by using the setter on the SelectedItem
       // property in the view model. Can then avoid this method altogether
 

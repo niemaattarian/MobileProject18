@@ -41,7 +41,7 @@ namespace ProjectModel
       {
         string path = Environment.GetFolderPath(
                         Environment.SpecialFolder.LocalApplicationData);
-        string filename = Path.Combine(path, MyUtils.JSON_ARTIST_FILE);
+        string filename = Path.Combine(path, MyUtils.JSON_ARTIST_FILE);//combines utils to artist json file
         using (var reader = new StreamReader(filename))
         {
           jsonText = reader.ReadToEnd();
@@ -54,7 +54,7 @@ namespace ProjectModel
                                         typeof(MainPage)).Assembly;
         // create the stream
         Stream stream = assembly.GetManifestResourceStream(
-                            "Project.Data.myArtist.txt");
+                            "Project.Data.myArtist.txt");//reads data from myArtist.txt file
         using (var reader = new StreamReader(stream))
         {
           jsonText = reader.ReadToEnd();
@@ -77,8 +77,8 @@ namespace ProjectModel
       using (var writer = new StreamWriter(filename, false))
       {
         // stringify equivalent
-        string jsonText = JsonConvert.SerializeObject(saveList);
-        writer.WriteLine(jsonText);
+        string jsonText = JsonConvert.SerializeObject(saveList);//saves json info to the list
+        writer.WriteLine(jsonText);//writes json text to the list
       }
     }
 

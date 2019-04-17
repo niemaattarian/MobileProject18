@@ -1,3 +1,8 @@
 [
-{"Artists":"Kanye West", "Genre":"Hip-Hop", "Album":"Ye", "Sales":1000000 }
+{"Artists":"Kanye West", "Genre":"Hip-Hop", "Album":"Ye", "Sales":1000000 },
+{"Artists":"The Weeknd", "Genre":"R&B", "Album":"Beauty Behind The Madness", "Sales":8000000 },
+{"Artists":"Travis Scott", "Genre":"Rap", "Album":"ASTROWORLD", "Sales":5000000 },
+{"Artists":"JayZ", "Genre":"Rap", "Album":"BluePrint", "Sales":100000000 },
+{"Artists":"2 Pac", "Genre":"Rap", "Album":"All Eyez On Me", "Sales":10000000 },
+{"Artists":"Me", "Genre":"Hip-Hop", "Album":"You", "Sales":5 }
 ]

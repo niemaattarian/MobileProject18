@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using Newtonsoft.Json;
-
+// Creates class for Artist (Data binding)
 namespace ProjectModel
 {
     public class Artist

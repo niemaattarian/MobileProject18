@@ -3002,6 +3002,9 @@ namespace Project.Droid
 			// aapt resource value: 0x7F010002
 			public const int travis = 2130771970;
 			
+			// aapt resource value: 0x7F010003
+			public const int travis1 = 2130771971;
+			
 			static Drawable()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();

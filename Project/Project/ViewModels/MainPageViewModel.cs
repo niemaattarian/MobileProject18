@@ -54,17 +54,17 @@ namespace ProjectModel.ViewModels
       DeleteFromListCommand = new Command<ArtistViewModel>(DeleteFromList);
     }
 
-    private void SaveList()
+    private void SaveList()//saves to the list
     {
       ArtistViewModel.SaveArtistData(ArtistList);
     }
 
-    private void ReadList()
+    private void ReadList()//reads to the list
     {
       ArtistList = ArtistViewModel.ReadArtistData();
     }
 
-    private void DeleteFromList(ArtistViewModel ar)
+    private void DeleteFromList(ArtistViewModel ar)// deletes from the list by artist name
     {
       ArtistList.Remove(ar);
       selectedArtist = null;

@@ -1,12 +1,26 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Project.ArtistDetailPage">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+  <ContentPage.Content>
+    <!--Details for the ArtistDetailPage taken from myArtist file.-->
+    <StackLayout>
+      <StackLayout>
+        <Label Text="Artists: " TextColor="Plum" />
+        <Label Text="{Binding Path=Artists}" TextColor="White"/>
+      </StackLayout>
+      <StackLayout>
+        <Label Text="Album: " TextColor="Plum" />
+        <Label Text="{Binding Path=Album}" TextColor="White"/>
+      </StackLayout>
+      <StackLayout>
+        <Label Text="Genre: " TextColor="Plum" />
+        <Label Text="{Binding Path=Genre}" TextColor="White"/>
+      </StackLayout>
+      <StackLayout>
+        <Label Text="Sales: " TextColor="Plum" />
+        <Label Text="{Binding Path=Sales}" TextColor="White"/>
+      </StackLayout>
+    </StackLayout>
+  </ContentPage.Content>
 </ContentPage>
