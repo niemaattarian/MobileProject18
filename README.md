@@ -19,6 +19,8 @@ At the bottom there are a number of available buttons with different functionali
 ~ The 'Add' button functionality brings the user to a seperate add page where they can add an artist of their choice with their repective information such as (String) Album, (String) Genre, (Int) Sales. This is then saved to JSON and displayed to the left of the screen with the rest of the artists in the list.
 There are problems with the add function as I believe it does not add correctly.
 
+For the design I kept a purple theme in terms of letter colouring and tints. This is accompanied with background images of famous hip-hop artists to stick with the music application idea.
+
 # Test Cases
 ### Test Case 1 - Update
 1) Click on a selected artist.
