@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Project.Views.NewArtistPage">
+
+  <!--<ContentPage.Resources>
+      <Style x:Key="EntryStyle" TargetType="Entry" >
+      <Setter Property="FontSize" Value="Small" />
+      <Setter Property="TextColor" Value="Purple" />
+  </Style>
+    <Style x:Key="ButtonStyle" TargetType="Button" >
+      <Setter Property="CornerRadius" Value="7" />
+      <Setter Property="BackgroundColor" Value="Plum"/>
+    </Style>-->
+    
+    <StackLayout >
+      <StackLayout Orientation="Horizontal" >
+        <Label Text="Artist: " FontSize="Medium" TextColor="Plum"/>
+        <Entry x:Name="entArtist" 
+                           Text="{Binding Path=Artist}"
+                           HorizontalOptions="FillAndExpand"/>
+      </StackLayout>
+      <StackLayout Orientation="Horizontal" >
+        <Label Text="Genre: " FontSize="Medium" TextColor="Plum"/>
+        <Entry x:Name="entGenre" 
+                           Text="{Binding Path=Genre}"
+                           HorizontalOptions="FillAndExpand"/>
+      </StackLayout>
+      <StackLayout Orientation="Horizontal" >
+        <Label Text="Album: " FontSize="Medium" TextColor="Plum"/>
+        <Entry x:Name="entAlbum" 
+                           Text="{Binding Path=Album}"
+                           HorizontalOptions="FillAndExpand"/>
+      </StackLayout>
+      <StackLayout Orientation="Horizontal" >
+        <Label Text="Sales: " FontSize="Medium" TextColor="Plum"/>
+      <Entry x:Name="entSales" 
+                           Text="{Binding Path=Sales}"
+                           HorizontalOptions="FillAndExpand"/>
+      <StackLayout>
+        <Button x:Name="btnSaveNewFile" Text="Save" Clicked="BtnSaveNewFile_Clicked"
+                      Margin="2" />
+          <Button x:Name="btnCancelFile" Text="Cancel" Clicked="BtnCancelFile_Clicked"
+                      Margin="2" />
+        </StackLayout>
+      </StackLayout>
+    </StackLayout>
+  <!--</ContentPage.Resources>
+  -->
+
+</ContentPage>

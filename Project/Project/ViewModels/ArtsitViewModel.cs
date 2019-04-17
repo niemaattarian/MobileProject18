@@ -21,8 +21,6 @@ namespace ProjectModel
       set { SetValue(ref _genre, value); }
     }
     private string _album;
-    private ArtistViewModel artist;
-
     public string Album
     {
       get { return _album; }

@@ -8,35 +8,35 @@
   <ContentPage.Resources>
     <Style x:Key="EntryStyle" TargetType="Entry" >
       <Setter Property="FontSize" Value="Small" />
-      <Setter Property="TextColor" Value="Purple" />
+      <Setter Property="TextColor" Value="Plum" />
     </Style>
     <Style x:Key="ButtonStyle" TargetType="Button" >
       <Setter Property="CornerRadius" Value="7" />
-      <Setter Property="BackgroundColor" Value="Plum"/>
+      <Setter Property="BackgroundColor" Value="Plum" />
     </Style>
-    
+
     <DataTemplate x:Key="ArtistTemplate">
       <ViewCell>
         <ViewCell.ContextActions>
           <MenuItem Text="Delete" 
-           Clicked="DeleteContext_Clicked"
-           CommandParameter="{Binding .}"
-           IsDestructive="True" />
+                              Clicked="DeleteContext_Clicked"
+                              CommandParameter="{Binding .}"
+                              IsDestructive="True" />
         </ViewCell.ContextActions>
         <StackLayout Margin="2">
           <StackLayout Orientation="Horizontal" Margin="2, 1">
-            <Label Text="Artists: " FontSize="Small" TextColor="Plum"/>
-            <Label Text="{Binding Path=Album}" FontSize="Small" TextColor="GhostWhite"/>
+            <Label Text="zyx: " TextColor="White" />
+            <Label Text="{Binding Path=Album}" TextColor="White"/>
           </StackLayout>
           <StackLayout Orientation="Horizontal" Margin="2, 1">
-            <Label Text="Genre: " FontSize="Small" TextColor="Plum"/>
-            <Label Text="{Binding Path=Genre}" FontSize="Small" TextColor="GhostWhite"/>
+            <Label Text="Sizehahaha: " TextColor="White"/>
+            <Label Text="{Binding Path=Genre}" TextColor="white"/>
           </StackLayout>
         </StackLayout>
       </ViewCell>
     </DataTemplate>
   </ContentPage.Resources>
-
+  
   <Grid>
     <Grid.RowDefinitions>
       <RowDefinition Height="Auto" />
@@ -105,9 +105,12 @@
                     Style="{StaticResource ButtonStyle}"
                     Command="{Binding DeleteFromListCommand}"
                     CommandParameter="{Binding SelectedArtist}"/>
-      <Label x:Name="lblCount" Text="" />
+      <Button x:Name="btnAddFile" Text="Add" Clicked="BtnAddFile_Clicked"
+              Style="{StaticResource ButtonStyle}"
+                    Margin="2" />
+   <!--   <Label x:Name="lblCount" Text="" />-->
     </StackLayout>
 
   </Grid>
-<!---->
+
 </ContentPage>

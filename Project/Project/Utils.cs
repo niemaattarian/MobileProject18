@@ -5,7 +5,7 @@ using System.IO;
 using System.Reflection;
 using System.Text;
 using ProjectModel;    // to access the dogs class
-//using Newtonsoft.Json;  // for json functions
+using Newtonsoft.Json;  // for json functions
 
 namespace Utils
 {

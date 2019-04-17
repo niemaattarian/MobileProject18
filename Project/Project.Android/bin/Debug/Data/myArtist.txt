@@ -1,4 +1,0 @@
-[
-{"Artists":"The Weeknd", "Genre":"R &amp; B", "Album":"The Hills", "Sales":7000000 },
-{"Artists":"Travis Scott", "Genre":"Hip Hop", "Album":"ASTROWORLD", "Sales":19000000 }
-]

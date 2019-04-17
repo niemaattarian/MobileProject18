@@ -1,4 +1,3 @@
-C:\Users\Niema\Desktop\Project\Project\Project.Android\bin\Debug\Data\myArtist.txt
 C:\Users\Niema\Desktop\Project\Project\Project.Android\bin\Debug\Project.Android.dll
 C:\Users\Niema\Desktop\Project\Project\Project.Android\bin\Debug\Project.Android.pdb
 C:\Users\Niema\Desktop\Project\Project\Project.Android\bin\Debug\com.companyname.apk

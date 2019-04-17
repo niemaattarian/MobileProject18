@@ -1,3 +1,4 @@
+using Project.Views;
 using ProjectModel;
 using ProjectModel.ViewModels;
 using System;
@@ -20,12 +21,17 @@ namespace Project
       (BindingContext as MainPageViewModel).DeleteFromListCommand.Execute(artist);
     }
 
-    private void ViewOneArtistSelected(object sender, SelectedItemChangedEventArgs e)
+    private async void ViewOneArtistSelected(object sender, SelectedItemChangedEventArgs e)
     {
-      (BindingContext as MainPageViewModel).SelectOneArtist(e.SelectedItem as ArtistViewModel);
+      await (BindingContext as MainPageViewModel).SelectOneArtist(e.SelectedItem as ArtistViewModel);
       // could do this even smarter by using the setter on the SelectedItem
       // property in the view model. Can then avoid this method altogether
 
+    }
+
+    private void BtnAddFile_Clicked(object sender, EventArgs e)
+    {
+      Navigation.PushModalAsync(new NavigationPage(new NewArtistPage()));
     }
   }
 }

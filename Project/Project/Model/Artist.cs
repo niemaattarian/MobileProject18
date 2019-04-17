@@ -1,10 +1,11 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using Newtonsoft.Json;
 
 namespace ProjectModel
 {
-    class Artist
+    public class Artist
     {
       #region == Public Properties ==
       public string Artists { get; set; }
