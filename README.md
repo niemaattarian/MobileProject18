@@ -12,8 +12,10 @@ If an 'Artist' is selected (double clicked) you are brought to a page which disp
 
 At the bottom there are a number of available buttons with different functionalities (Save, Delete, Add).
 
-~ The 'Save' button functionality allows the user to save any information they have edited from the list of artists on the left of the screen. This is updated in the JSON. 
+~ The 'Save' button functionality allows the user to save any information they have edited from the list of artists on the left of the screen. This is updated in the JSON.
+
 ~ The 'Delete' button functionality allows the user to delete an artist selected from the list along the left-hand side of the home-screen. This is also updated in the JSON.
+
 ~ The 'Add' button functionality brings the user to a seperate add page where they can add an artist of their choice with their repective information such as (String) Album, (String) Genre, (Int) Sales. This is then saved to JSON and displayed to the left of the screen with the rest of the artists in the list.
 There are problems with the add function as I believe it does not add correctly.
 
